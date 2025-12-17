@@ -1,0 +1,67 @@
+.map-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.map-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 20px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder {
+  text-align: center;
+  color: #6b7280;
+}
+
+.map-placeholder h2 {
+  margin: 0 0 16px 0;
+  font-size: 48px;
+}
+
+.map-placeholder p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.map-note {
+  font-size: 14px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.map-legend {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.map-legend h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+}
+
+.legend-items {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
