@@ -28,9 +28,9 @@ This platform serves as a digital hub for university expo events, enabling:
 The project follows a modern full-stack architecture with three main components:
 
 ```
-├── expo_backend/      # RESTful API Server (Node.js + Express)
-├── expo_mobile/       # Mobile Application (React Native + Expo)
-└── expo_web/          # Web Dashboard (React + Vite)
+├── backend/           # RESTful API Server (Node.js + Express)
+├── mobile/            # Mobile Application (React Native + Expo)
+└── web/               # Web Dashboard (React + Vite)
 ```
 
 ## ✨ Features
@@ -66,6 +66,7 @@ The project follows a modern full-stack architecture with three main components:
 - 📱 Responsive design (mobile & web)
 - 🔥 Firebase integration for real-time chat
 - ☁️ AWS S3 for file storage
+- 🤖 Retrieval-Augmented Generation (RAG) to ground AI responses in relevant platform information
 - 🛡️ Rate limiting and security middleware
 - 🌐 RESTful API architecture
 
@@ -80,6 +81,7 @@ The project follows a modern full-stack architecture with three main components:
 - **Email**: Nodemailer
 - **Security**: bcryptjs, rate limiting middleware
 - **Real-time**: Firebase Admin SDK
+- **AI**: Retrieval-Augmented Generation (RAG) for context-grounded responses
 
 ### Mobile App
 - **Framework**: React Native with Expo
@@ -100,9 +102,9 @@ The project follows a modern full-stack architecture with three main components:
 
 ## 📁 Project Structure
 
-### Backend (`expo_backend/`)
+### Backend (`backend/`)
 ```
-expo_backend/
+backend/
 ├── config/                 # Configuration files
 │   ├── db.js              # MySQL database connection
 │   └── multer.js          # File upload configuration
@@ -134,9 +136,9 @@ expo_backend/
 └── index.js             # Server entry point
 ```
 
-### Mobile App (`expo_mobile/`)
+### Mobile App (`mobile/`)
 ```
-expo_mobile/
+mobile/
 ├── apis/                # API service layer
 │   ├── company/
 │   ├── project/
@@ -170,9 +172,9 @@ expo_mobile/
     └── validationSignUp.jsx
 ```
 
-### Web Dashboard (`expo_web/`)
+### Web Dashboard (`web/`)
 ```
-expo_web/
+web/
 ├── src/
 │   ├── api/            # API services
 │   │   ├── auth.js
@@ -215,16 +217,15 @@ expo_web/
 #### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd softwarepro
+cd softwarepro-g
 ```
 
 #### 2. Backend Setup
 ```bash
-cd expo_backend
+cd backend
 npm install
 
-# Create .env file
-cp .env.example .env
+# Create a .env file and add the variables listed below
 
 # Configure environment variables (see below)
 # Run database migrations/setup
@@ -234,7 +235,7 @@ npm run dev
 
 #### 3. Mobile App Setup
 ```bash
-cd expo_mobile
+cd mobile
 npm install
 
 # Configure firebase.js with your Firebase credentials
@@ -247,7 +248,7 @@ expo start
 
 #### 4. Web Dashboard Setup
 ```bash
-cd expo_web
+cd web
 npm install
 
 # Update API base URL in src/lib/apiClient.js
@@ -346,20 +347,20 @@ http://localhost:5000/api/v1
 
 **Backend:**
 ```bash
-cd expo_backend
+cd backend
 npm run dev
 ```
 
 **Mobile App:**
 ```bash
-cd expo_mobile
+cd mobile
 npm start
 # Then press 'a' for Android or 'i' for iOS
 ```
 
 **Web Dashboard:**
 ```bash
-cd expo_web
+cd web
 npm run dev
 ```
 
@@ -367,20 +368,20 @@ npm run dev
 
 **Backend:**
 ```bash
-cd expo_backend
+cd backend
 npm start
 ```
 
 **Mobile App:**
 ```bash
-cd expo_mobile
+cd mobile
 expo build:android
 expo build:ios
 ```
 
 **Web Dashboard:**
 ```bash
-cd expo_web
+cd web
 npm run build
 npm run preview
 ```
